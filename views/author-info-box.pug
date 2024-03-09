@@ -1,0 +1,12 @@
+// author-info-box.pug
+
+div#info_box(v-if="post.thisBox")
+  p.closeBtn.closeBtnP(v-on:click="closeInfoBox(post)") &#10006;
+  div#info_title {{ post.name }}
+  div#info_foodie
+    span Foodie Level: {{ post.foodielevel }}
+  div#info_bio
+    span Bio:<br>
+    |  {{ post.bio }}
+  button.closeBtn.closeBtnB(v-on:click="closeInfoBox(post)") Close
+  p#close_info
